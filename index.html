@@ -82,6 +82,25 @@
             text-decoration: underline;
         }
 
+        .lang-toggle {
+            text-align: right;
+            margin-bottom: 1rem;
+        }
+
+        .lang-toggle button {
+            background: none;
+            border: 1px solid #86868b;
+            border-radius: 6px;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.85rem;
+            color: #1d1d1f;
+            cursor: pointer;
+        }
+
+        .lang-toggle button:hover {
+            background: #e8e8ed;
+        }
+
         footer {
             text-align: center;
             color: #86868b;
@@ -131,6 +150,15 @@
                 color: #2997ff;
             }
 
+            .lang-toggle button {
+                color: #f5f5f7;
+                border-color: #6e6e73;
+            }
+
+            .lang-toggle button:hover {
+                background: #38383a;
+            }
+
             footer {
                 color: #6e6e73;
                 border-top-color: #38383a;
@@ -144,39 +172,83 @@
 </head>
 
 <body>
-    <h1>tnlabs アプリ一覧</h1>
-    <p class="subtitle">プライバシーポリシー</p>
+    <div class="lang-toggle">
+        <button onclick="toggleLang()">English / 日本語</button>
+    </div>
 
-    <div class="section">
-        <h2>iOS</h2>
-        <div class="card">
-            <div class="card-title">PractiCalc</div>
-            <div class="card-description">電卓アプリ</div>
-            <a class="card-link" href="PractiCalculator.html">プライバシーポリシー →</a>
+    <div id="ja">
+        <h1>tnlabs アプリ一覧</h1>
+        <p class="subtitle">プライバシーポリシー</p>
+
+        <div class="section">
+            <h2>iOS</h2>
+            <div class="card">
+                <div class="card-title">PractiCalc</div>
+                <div class="card-description">電卓アプリ</div>
+                <a class="card-link" href="PractiCalculator.html">プライバシーポリシー →</a>
+            </div>
+            <div class="card">
+                <div class="card-title">PractiCalc2</div>
+                <div class="card-description">電卓アプリ（有料・広告なし）</div>
+                <a class="card-link" href="PractiCalc2.html">プライバシーポリシー →</a>
+            </div>
+            <div class="card">
+                <div class="card-title">NineHarmony</div>
+                <div class="card-description">ソルフェジオ周波数アプリ</div>
+                <a class="card-link" href="NineHarmony/">プライバシーポリシー →</a>
+            </div>
+            <div class="card">
+                <div class="card-title">LevelApp</div>
+                <div class="card-description">水平器アプリ</div>
+                <a class="card-link" href="LevelApp/">プライバシーポリシー →</a>
+            </div>
         </div>
-        <div class="card">
-            <div class="card-title">PractiCalc2</div>
-            <div class="card-description">電卓アプリ</div>
-            <a class="card-link" href="PractiCalc2.html">プライバシーポリシー →</a>
-        </div>
-        <div class="card">
-            <div class="card-title">NineHarmony</div>
-            <div class="card-description">ソルフェジオ周波数アプリ</div>
-            <a class="card-link" href="NineHarmony/">プライバシーポリシー →</a>
-        </div>
-        <div class="card">
-            <div class="card-title">LevelApp</div>
-            <div class="card-description">水平器アプリ</div>
-            <a class="card-link" href="LevelApp/">プライバシーポリシー →</a>
+
+        <div class="section">
+            <h2>Android</h2>
+            <div class="card">
+                <div class="card-title">PractiCalculator</div>
+                <div class="card-description">電卓アプリ</div>
+                <a class="card-link" href="AndroidCalculator/privacy-policy.html">プライバシーポリシー →</a>
+            </div>
         </div>
     </div>
 
-    <div class="section">
-        <h2>Android</h2>
-        <div class="card">
-            <div class="card-title">PractiCalculator</div>
-            <div class="card-description">電卓アプリ</div>
-            <a class="card-link" href="AndroidCalculator/privacy-policy.html">プライバシーポリシー →</a>
+    <div id="en" style="display:none;">
+        <h1>tnlabs App List</h1>
+        <p class="subtitle">Privacy Policy</p>
+
+        <div class="section">
+            <h2>iOS</h2>
+            <div class="card">
+                <div class="card-title">PractiCalc</div>
+                <div class="card-description">Calculator App</div>
+                <a class="card-link" href="PractiCalculator.html">Privacy Policy →</a>
+            </div>
+            <div class="card">
+                <div class="card-title">PractiCalc2</div>
+                <div class="card-description">Calculator App (Paid, Ad-free)</div>
+                <a class="card-link" href="PractiCalc2.html">Privacy Policy →</a>
+            </div>
+            <div class="card">
+                <div class="card-title">NineHarmony</div>
+                <div class="card-description">Solfeggio Frequency App</div>
+                <a class="card-link" href="NineHarmony/">Privacy Policy →</a>
+            </div>
+            <div class="card">
+                <div class="card-title">LevelApp</div>
+                <div class="card-description">Spirit Level App</div>
+                <a class="card-link" href="LevelApp/">Privacy Policy →</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Android</h2>
+            <div class="card">
+                <div class="card-title">PractiCalculator</div>
+                <div class="card-description">Calculator App</div>
+                <a class="card-link" href="AndroidCalculator/privacy-policy.html">Privacy Policy →</a>
+            </div>
         </div>
     </div>
 
@@ -184,6 +256,22 @@
         <p>&copy; 2026 tnlabs</p>
         <p><a href="mailto:tn.labs2106@gmail.com">tn.labs2106@gmail.com</a></p>
     </footer>
+
+    <script>
+        function toggleLang() {
+            var ja = document.getElementById('ja');
+            var en = document.getElementById('en');
+            if (ja.style.display === 'none') {
+                ja.style.display = '';
+                en.style.display = 'none';
+                document.documentElement.lang = 'ja';
+            } else {
+                ja.style.display = 'none';
+                en.style.display = '';
+                document.documentElement.lang = 'en';
+            }
+        }
+    </script>
 </body>
 
 </html>
