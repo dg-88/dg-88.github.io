@@ -1,10 +1,10 @@
-# CLAUDE.md — GitHub.io プライバシーポリシー管理ガイド
+# CLAUDE.md — 薄いポインタ（@import で単一ソースを自動ロード）（dg-88.github.io）
 
-このリポジトリは、私が公開している **iPhoneアプリ各種のプライバシーポリシー** をまとめて掲載するサイトです。
-GitHub Pages（`dg-88.github.io`）を通じて一般公開され、App Store Connect の「プライバシーポリシーURL」に使用されます。
+> このファイルは **意図的にルールを持ちません**（drift 防止・単一ソース化）。
+> 次行の `@import` で、権威ある単一ソース `docs/GUIDE.md` を**自動ロード**する（能動読み不要）。
 
----
+@docs/GUIDE.md
 
-## 📁 フォルダ構成
-
-各アプリごとに1フォルダを作成し、以下のように配置します：
+> import 非対応環境（Codex 等）では [`docs/GUIDE.md`](./docs/GUIDE.md) を必ず全文読むこと。
+> Codex 用の `AGENTS.md` は同じ `docs/GUIDE.md` を指すプレーンな薄ポインタ。
+> ルール・運用を変えるときは `docs/GUIDE.md` を編集すること（`CLAUDE.md` / `AGENTS.md` には書かない）。
